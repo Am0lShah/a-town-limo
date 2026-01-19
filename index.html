@@ -28,6 +28,23 @@
 
     <style>
         /* ================================
+           GLOBAL RESET - REMOVE WHITE BORDERS
+           ================================ */
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            background-color: #0a0a0a;
+        }
+
+        /* ================================
            SCOPED STYLES FOR WORDPRESS
            All styles are scoped under #atown-limo-wrapper
            ================================ */
@@ -43,6 +60,8 @@
             color: #ffffff;
             background-color: #0a0a0a;
             line-height: 1.6;
+            width: 100%;
+            overflow-x: hidden;
         }
 
         /* ================================
@@ -165,6 +184,20 @@
             overflow: hidden;
         }
 
+        @media (max-width: 768px) {
+            #atown-limo-wrapper .hero {
+                padding: 2rem 1rem;
+                overflow-x: hidden;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #atown-limo-wrapper .hero {
+                padding: 2rem 1rem;
+                overflow-x: hidden;
+            }
+        }
+
         #atown-limo-wrapper .hero-video {
             position: absolute;
             top: 0;
@@ -197,6 +230,20 @@
             align-items: center;
             position: relative;
             z-index: 2;
+            padding: 0 1rem;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 768px) {
+            #atown-limo-wrapper .hero-content {
+                padding: 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #atown-limo-wrapper .hero-content {
+                padding: 0;
+            }
         }
 
         #atown-limo-wrapper .hero-text {
@@ -232,6 +279,33 @@
             padding: 2.5rem;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
             animation: fadeInRight 1s ease-out;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 768px) {
+            #atown-limo-wrapper .booking-widget {
+                width: calc(100% - 2rem);
+                max-width: none;
+                padding: 2rem 1.5rem;
+                margin: 0 1rem;
+                border: 1px solid rgba(212, 175, 55, 0.3);
+                box-sizing: border-box;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #atown-limo-wrapper .booking-widget {
+                width: calc(100% - 2rem);
+                max-width: none;
+                padding: 1.5rem 1rem;
+                margin: 0 1rem;
+                border-radius: 10px;
+                border: 1px solid rgba(212, 175, 55, 0.3);
+                box-sizing: border-box;
+            }
         }
 
         #atown-limo-wrapper .booking-widget h3 {
@@ -265,6 +339,7 @@
             font-family: 'Montserrat', sans-serif;
             font-size: 0.95rem;
             transition: all 0.3s ease;
+            box-sizing: border-box;
         }
 
         #atown-limo-wrapper .form-group input:focus,
@@ -1260,7 +1335,12 @@
 
             #atown-limo-wrapper .hero {
                 min-height: auto;
-                padding: 3rem 1.5rem;
+                padding: 3rem 1rem;
+            }
+
+            #atown-limo-wrapper .hero-content {
+                padding: 0;
+                max-width: 100%;
             }
 
             #atown-limo-wrapper .hero-video {
@@ -1274,10 +1354,6 @@
 
             #atown-limo-wrapper .parallax-gallery-section {
                 padding: 4rem 0;
-            }
-
-            #atown-limo-wrapper .booking-widget {
-                padding: 2rem 1.5rem;
             }
 
             #atown-limo-wrapper .booking-widget h3 {
@@ -1342,11 +1418,12 @@
             }
 
             #atown-limo-wrapper .hero {
-                padding: 2rem 1rem;
+                padding: 2rem 0.5rem;
             }
 
-            #atown-limo-wrapper .booking-widget {
-                padding: 1.5rem 1rem;
+            #atown-limo-wrapper .hero-content {
+                padding: 0;
+                max-width: 100%;
             }
 
             #atown-limo-wrapper .form-group input,
