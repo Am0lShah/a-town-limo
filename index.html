@@ -359,6 +359,21 @@
             border-bottom: 1px solid rgba(212, 175, 55, 0.2);
         }
 
+        /* Mobile responsive trust badges */
+        @media (max-width: 768px) {
+            #atown-limo-wrapper .trust-badges {
+                grid-template-columns: 1fr;
+                gap: 0.6rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #atown-limo-wrapper .trust-badges {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+        }
+
         #atown-limo-wrapper .trust-badge {
             display: flex;
             align-items: center;
@@ -370,6 +385,20 @@
             transition: all 0.3s ease;
         }
 
+        @media (max-width: 768px) {
+            #atown-limo-wrapper .trust-badge {
+                padding: 0.6rem;
+                gap: 0.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #atown-limo-wrapper .trust-badge {
+                padding: 0.5rem;
+                gap: 0.4rem;
+            }
+        }
+
         #atown-limo-wrapper .trust-badge:hover {
             background: rgba(212, 175, 55, 0.1);
             border-color: rgba(212, 175, 55, 0.4);
@@ -379,6 +408,18 @@
         #atown-limo-wrapper .trust-icon {
             font-size: 1.5rem;
             line-height: 1;
+        }
+
+        @media (max-width: 768px) {
+            #atown-limo-wrapper .trust-icon {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #atown-limo-wrapper .trust-icon {
+                font-size: 1.2rem;
+            }
         }
 
         #atown-limo-wrapper .trust-icon.pulse {
@@ -414,6 +455,26 @@
         #atown-limo-wrapper .trust-info small {
             font-size: 0.7rem;
             color: rgba(255, 255, 255, 0.6);
+        }
+
+        @media (max-width: 768px) {
+            #atown-limo-wrapper .trust-info strong {
+                font-size: 0.8rem;
+            }
+            
+            #atown-limo-wrapper .trust-info small {
+                font-size: 0.65rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #atown-limo-wrapper .trust-info strong {
+                font-size: 0.75rem;
+            }
+            
+            #atown-limo-wrapper .trust-info small {
+                font-size: 0.6rem;
+            }
         }
 
         /* Recent Booking Notification */
