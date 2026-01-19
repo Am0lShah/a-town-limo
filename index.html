@@ -234,22 +234,6 @@
             box-sizing: border-box;
         }
 
-        @media (max-width: 768px) {
-            #atown-limo-wrapper .hero-content {
-                padding: 0 1rem;
-                gap: 2rem;
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 480px) {
-            #atown-limo-wrapper .hero-content {
-                padding: 0 0.5rem;
-                gap: 1.5rem;
-                grid-template-columns: 1fr;
-            }
-        }
-
         #atown-limo-wrapper .hero-text {
             animation: fadeInLeft 1s ease-out;
         }
@@ -287,29 +271,6 @@
             max-width: 600px;
             margin: 0 auto;
             box-sizing: border-box;
-        }
-
-        @media (max-width: 768px) {
-            #atown-limo-wrapper .booking-widget {
-                width: 100%;
-                max-width: none;
-                padding: 2rem 1.5rem;
-                margin: 0;
-                border: 1px solid rgba(212, 175, 55, 0.3);
-                box-sizing: border-box;
-            }
-        }
-
-        @media (max-width: 480px) {
-            #atown-limo-wrapper .booking-widget {
-                width: 100%;
-                max-width: none;
-                padding: 1.5rem 1rem;
-                margin: 0;
-                border-radius: 10px;
-                border: 1px solid rgba(212, 175, 55, 0.3);
-                box-sizing: border-box;
-            }
         }
 
         #atown-limo-wrapper .booking-widget h3 {
@@ -1339,12 +1300,28 @@
 
             #atown-limo-wrapper .hero {
                 min-height: auto;
-                padding: 3rem 1rem;
+                padding: 2rem 1rem;
             }
 
             #atown-limo-wrapper .hero-content {
-                grid-template-columns: 1fr;
+                display: flex;
+                flex-direction: column;
                 gap: 2rem;
+                padding: 0;
+                max-width: 100%;
+                align-items: center;
+            }
+
+            #atown-limo-wrapper .hero-text {
+                text-align: center;
+                width: 100%;
+            }
+
+            #atown-limo-wrapper .booking-widget {
+                width: calc(100vw - 2rem);
+                max-width: 500px;
+                margin: 0 auto;
+                padding: 1.5rem;
             }
 
             #atown-limo-wrapper .hero-video {
@@ -1417,7 +1394,23 @@
             }
 
             #atown-limo-wrapper .hero {
-                padding: 2rem 0.5rem;
+                padding: 1.5rem 0.5rem;
+            }
+
+            #atown-limo-wrapper .hero-content {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+                padding: 0;
+                max-width: 100%;
+                align-items: center;
+            }
+
+            #atown-limo-wrapper .booking-widget {
+                width: calc(100vw - 1rem);
+                max-width: 450px;
+                margin: 0 auto;
+                padding: 1.2rem;
             }
 
             #atown-limo-wrapper .form-group input,
