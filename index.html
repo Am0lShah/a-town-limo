@@ -1,0 +1,2464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Town Limo - Premium Luxury Transportation</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="A Town Limo - Atlanta's premier luxury transportation service. Professional chauffeurs, meticulous fleet, and on-time guarantee. Book Executive Sedans, Cadillac Escalades, and Mercedes Sprinters.">
+    <meta name="keywords"
+        content="atlanta limo, luxury transportation, chauffeur service, airport transfer, corporate travel, cadillac escalade, executive sedan, mercedes sprinter">
+    <meta name="author" content="A Town Limo">
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="A Town Limo - Premium Luxury Transportation in Atlanta">
+    <meta property="og:description"
+        content="Professional chauffeur services with meticulous fleet and on-time guarantee. Available 24/7 for airport transfers, corporate travel, and special events.">
+    <meta property="og:site_name" content="A Town Limo">
+
+    <style>
+        /* ================================
+           SCOPED STYLES FOR WORDPRESS
+           All styles are scoped under #atown-limo-wrapper
+           ================================ */
+
+        #atown-limo-wrapper * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #atown-limo-wrapper {
+            font-family: 'Montserrat', sans-serif;
+            color: #ffffff;
+            background-color: #0a0a0a;
+            line-height: 1.6;
+        }
+
+        /* ================================
+           HEADER - STICKY NAVIGATION
+           ================================ */
+
+        #atown-limo-wrapper .header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 1.2rem 2rem;
+            transition: all 0.3s ease;
+        }
+
+        #atown-limo-wrapper .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #atown-limo-wrapper .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: #d4af37;
+            text-decoration: none;
+        }
+
+        #atown-limo-wrapper .nav {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        #atown-limo-wrapper .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        #atown-limo-wrapper .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        #atown-limo-wrapper .nav-links a:hover {
+            color: #d4af37;
+        }
+
+        #atown-limo-wrapper .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #d4af37;
+            transition: width 0.3s ease;
+        }
+
+        #atown-limo-wrapper .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        #atown-limo-wrapper .cta-phone {
+            background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+            color: #0a0a0a;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        #atown-limo-wrapper .cta-phone:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+        }
+
+        /* Mobile Menu Toggle */
+        #atown-limo-wrapper .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        #atown-limo-wrapper .mobile-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #d4af37;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        /* ================================
+           HERO SECTION
+           ================================ */
+
+        #atown-limo-wrapper .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #0a0a0a;
+            padding: 2rem;
+            overflow: hidden;
+        }
+
+        #atown-limo-wrapper .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+            opacity: 0.6;
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+
+        #atown-limo-wrapper .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(10, 10, 10, 0.8) 0%, rgba(0, 0, 0, 0.6) 100%);
+            z-index: 1;
+        }
+
+        #atown-limo-wrapper .hero-content {
+            max-width: 1400px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        #atown-limo-wrapper .hero-text {
+            animation: fadeInLeft 1s ease-out;
+        }
+
+        #atown-limo-wrapper .hero-headline {
+            font-size: clamp(2rem, 5vw, 4.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+        }
+
+        #atown-limo-wrapper .hero-subheadline {
+            font-size: clamp(1rem, 2vw, 1.4rem);
+            font-weight: 400;
+            color: #d4af37;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        /* ================================
+           BOOKING WIDGET
+           ================================ */
+
+        #atown-limo-wrapper .booking-widget {
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 15px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+            animation: fadeInRight 1s ease-out;
+        }
+
+        #atown-limo-wrapper .booking-widget h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            color: #d4af37;
+            text-align: center;
+        }
+
+        #atown-limo-wrapper .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        #atown-limo-wrapper .form-group label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+        }
+
+        #atown-limo-wrapper .form-group input,
+        #atown-limo-wrapper .form-group select {
+            width: 100%;
+            padding: 0.9rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 8px;
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        #atown-limo-wrapper .form-group input:focus,
+        #atown-limo-wrapper .form-group select:focus {
+            outline: none;
+            border-color: #d4af37;
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+        }
+
+        #atown-limo-wrapper .form-group input::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        #atown-limo-wrapper .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        #atown-limo-wrapper .btn-quote {
+            width: 100%;
+            padding: 1.1rem;
+            background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+            color: #0a0a0a;
+            border: none;
+            border-radius: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);
+            margin-top: 1rem;
+        }
+
+        #atown-limo-wrapper .btn-quote:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(212, 175, 55, 0.6);
+        }
+
+        /* ================================
+           TRUST BADGES & SOCIAL PROOF
+           ================================ */
+
+        #atown-limo-wrapper .trust-badges {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        #atown-limo-wrapper .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.8rem;
+            background: rgba(212, 175, 55, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        #atown-limo-wrapper .trust-badge:hover {
+            background: rgba(212, 175, 55, 0.1);
+            border-color: rgba(212, 175, 55, 0.4);
+            transform: translateY(-2px);
+        }
+
+        #atown-limo-wrapper .trust-icon {
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        #atown-limo-wrapper .trust-icon.pulse {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 0.8;
+            }
+        }
+
+        #atown-limo-wrapper .trust-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+        }
+
+        #atown-limo-wrapper .trust-info strong {
+            font-size: 0.85rem;
+            color: #d4af37;
+            font-weight: 600;
+        }
+
+        #atown-limo-wrapper .trust-info small {
+            font-size: 0.7rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Recent Booking Notification */
+        #atown-limo-wrapper .recent-booking {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 0.8rem 1rem;
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid rgba(76, 175, 80, 0.3);
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            animation: slideInDown 0.5s ease-out;
+        }
+
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #atown-limo-wrapper .booking-icon {
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(135deg, #4caf50, #66bb6a);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        #atown-limo-wrapper .booking-text {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+        }
+
+        #atown-limo-wrapper .booking-text strong {
+            color: #4caf50;
+            font-size: 0.9rem;
+        }
+
+        #atown-limo-wrapper .booking-text small {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.75rem;
+        }
+
+        /* Price Estimator */
+        #atown-limo-wrapper .price-estimator {
+            margin: 1.5rem 0;
+            padding: 1.2rem;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(244, 208, 63, 0.05));
+            border: 2px solid #d4af37;
+            border-radius: 12px;
+            text-align: center;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        #atown-limo-wrapper .price-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 0.8rem;
+            color: #d4af37;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        #atown-limo-wrapper .price-tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: help;
+            opacity: 0.7;
+        }
+
+        #atown-limo-wrapper .price-tooltip:hover {
+            opacity: 1;
+        }
+
+        #atown-limo-wrapper .tooltip-text {
+            visibility: hidden;
+            position: absolute;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.9);
+            color: #fff;
+            padding: 0.5rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            white-space: nowrap;
+            z-index: 100;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        #atown-limo-wrapper .price-tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        #atown-limo-wrapper .tooltip-text::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 5px solid transparent;
+            border-top-color: rgba(0, 0, 0, 0.9);
+        }
+
+        #atown-limo-wrapper .price-amount {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #d4af37;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
+        }
+
+        #atown-limo-wrapper .price-details {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.85rem;
+        }
+
+        /* ================================
+           SPARKLE BUTTON EFFECT
+           ================================ */
+
+        #atown-limo-wrapper .cta-phone,
+        #atown-limo-wrapper .btn-quote {
+            position: relative;
+            overflow: visible !important;
+        }
+
+        #atown-limo-wrapper .cta-phone .sparkle-text,
+        #atown-limo-wrapper .btn-quote .sparkle-text {
+            position: relative;
+            display: inline-block;
+            transition: all 0.2s ease;
+        }
+
+        #atown-limo-wrapper .cta-phone:hover .sparkle-text,
+        #atown-limo-wrapper .btn-quote:hover .sparkle-text {
+            transform: translate(2px, -2px);
+        }
+
+        #atown-limo-wrapper .cta-phone svg,
+        #atown-limo-wrapper .btn-quote svg {
+            position: absolute;
+            z-index: 10;
+            width: 12px;
+            height: 12px;
+            pointer-events: none;
+            transform: translate(-50%, -50%) scale(0);
+        }
+
+        #atown-limo-wrapper .cta-phone svg path,
+        #atown-limo-wrapper .btn-quote svg path {
+            fill: #ffffff;
+        }
+
+        #atown-limo-wrapper .cta-phone:hover svg,
+        #atown-limo-wrapper .btn-quote:hover svg {
+            animation: sparkle 0.75s calc((0.15s * var(--d))) both;
+        }
+
+        @keyframes sparkle {
+            0% {
+                transform: translate(-50%, -50%) scale(0);
+                opacity: 0;
+            }
+
+            50% {
+                transform: translate(-50%, -50%) scale(var(--s, 1));
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(-50%, -50%) scale(0);
+                opacity: 0;
+            }
+        }
+
+        #atown-limo-wrapper .cta-phone svg:nth-of-type(1),
+        #atown-limo-wrapper .btn-quote svg:nth-of-type(1) {
+            --d: 1;
+            --s: 1.1;
+            top: 20%;
+            left: 10%;
+        }
+
+        #atown-limo-wrapper .cta-phone svg:nth-of-type(2),
+        #atown-limo-wrapper .btn-quote svg:nth-of-type(2) {
+            --d: 2;
+            --s: 1.25;
+            top: 80%;
+            left: 20%;
+        }
+
+        #atown-limo-wrapper .cta-phone svg:nth-of-type(3),
+        #atown-limo-wrapper .btn-quote svg:nth-of-type(3) {
+            --d: 3;
+            --s: 1.1;
+            top: 40%;
+            left: 50%;
+        }
+
+        #atown-limo-wrapper .cta-phone svg:nth-of-type(4),
+        #atown-limo-wrapper .btn-quote svg:nth-of-type(4) {
+            --d: 2;
+            --s: 0.9;
+            top: 60%;
+            left: 80%;
+        }
+
+        #atown-limo-wrapper .cta-phone svg:nth-of-type(5),
+        #atown-limo-wrapper .btn-quote svg:nth-of-type(5) {
+            --d: 4;
+            --s: 0.8;
+            top: 30%;
+            left: 90%;
+        }
+
+        /* ================================
+           SERVICES SECTION
+           ================================ */
+
+        #atown-limo-wrapper .services-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(180deg, #0a0a0a 0%, #151515 100%);
+            overflow: hidden;
+        }
+
+        #atown-limo-wrapper .services-carousel-wrapper {
+            position: relative;
+            max-width: 1400px;
+            margin: 4rem auto 0;
+            overflow: hidden;
+        }
+
+        #atown-limo-wrapper .services-grid {
+            display: flex;
+            gap: 2rem;
+            animation: infiniteScroll 30s linear infinite;
+            will-change: transform;
+        }
+
+        #atown-limo-wrapper .services-grid:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes infiniteScroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(calc(-100% / 2));
+            }
+        }
+
+        #atown-limo-wrapper .service-card {
+            min-width: 350px;
+            background: rgba(10, 10, 10, 0.5);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            cursor: pointer;
+            transform-style: preserve-3d;
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            position: relative;
+        }
+
+        #atown-limo-wrapper .service-card:hover {
+            background: rgba(212, 175, 55, 0.05);
+            border-color: #d4af37;
+            transform: translateY(-15px) rotateX(10deg) scale(1.05);
+            box-shadow: 0 25px 50px rgba(212, 175, 55, 0.3);
+            z-index: 10;
+        }
+
+        #atown-limo-wrapper .service-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        #atown-limo-wrapper .service-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #d4af37;
+            margin-bottom: 1rem;
+        }
+
+        #atown-limo-wrapper .service-description {
+            font-size: 0.95rem;
+            color: #cccccc;
+            line-height: 1.7;
+        }
+
+        /* ================================
+           FLEET SECTION
+           ================================ */
+
+        #atown-limo-wrapper .fleet-section {
+            padding: 6rem 2rem;
+            background: #0a0a0a;
+        }
+
+        #atown-limo-wrapper .section-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        #atown-limo-wrapper .section-title {
+            text-align: center;
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        #atown-limo-wrapper .section-subtitle {
+            text-align: center;
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            color: #d4af37;
+            margin-bottom: 4rem;
+            font-weight: 400;
+        }
+
+        #atown-limo-wrapper .fleet-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+        }
+
+        #atown-limo-wrapper .fleet-card {
+            background: linear-gradient(145deg, #151515 0%, #0f0f0f 100%);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+
+        #atown-limo-wrapper .fleet-card:hover {
+            transform: translateY(-10px);
+            border-color: #d4af37;
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
+        }
+
+        #atown-limo-wrapper .fleet-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            color: #666;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            overflow: hidden;
+            position: relative;
+        }
+
+        #atown-limo-wrapper .fleet-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        #atown-limo-wrapper .fleet-card:hover .fleet-image img {
+            transform: scale(1.1);
+        }
+
+        #atown-limo-wrapper .fleet-info {
+            padding: 2rem;
+        }
+
+        #atown-limo-wrapper .fleet-name {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            color: #d4af37;
+        }
+
+        #atown-limo-wrapper .fleet-description {
+            font-size: 0.95rem;
+            color: #cccccc;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        #atown-limo-wrapper .fleet-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        #atown-limo-wrapper .feature {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: #ffffff;
+            background: rgba(212, 175, 55, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+        }
+
+        #atown-limo-wrapper .feature-icon {
+            font-size: 1.2rem;
+        }
+
+        /* ================================
+           VALUE PROPOSITIONS SECTION
+           ================================ */
+
+        #atown-limo-wrapper .value-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(180deg, #0a0a0a 0%, #151515 100%);
+        }
+
+        #atown-limo-wrapper .value-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        #atown-limo-wrapper .value-card {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        #atown-limo-wrapper .value-card:hover {
+            background: rgba(212, 175, 55, 0.05);
+            border-color: #d4af37;
+            transform: translateY(-5px);
+        }
+
+        #atown-limo-wrapper .value-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        #atown-limo-wrapper .value-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #d4af37;
+        }
+
+        #atown-limo-wrapper .value-description {
+            font-size: 0.95rem;
+            color: #cccccc;
+            line-height: 1.6;
+        }
+
+        /* ================================
+           FOOTER SECTION
+           ================================ */
+
+        #atown-limo-wrapper .footer {
+            background: linear-gradient(180deg, #0a0a0a 0%, #050505 100%);
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 4rem 2rem 2rem;
+        }
+
+        #atown-limo-wrapper .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        #atown-limo-wrapper .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        #atown-limo-wrapper .footer-brand h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #d4af37;
+            margin-bottom: 1rem;
+        }
+
+        #atown-limo-wrapper .footer-brand p {
+            color: #cccccc;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        #atown-limo-wrapper .footer-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        #atown-limo-wrapper .footer-contact a {
+            color: #ffffff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        #atown-limo-wrapper .footer-contact a:hover {
+            color: #d4af37;
+        }
+
+        #atown-limo-wrapper .footer-section h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #d4af37;
+            margin-bottom: 1.5rem;
+        }
+
+        #atown-limo-wrapper .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        #atown-limo-wrapper .footer-links a {
+            color: #cccccc;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        #atown-limo-wrapper .footer-links a:hover {
+            color: #d4af37;
+            transform: translateX(5px);
+        }
+
+        #atown-limo-wrapper .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        #atown-limo-wrapper .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #d4af37;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        #atown-limo-wrapper .social-links a:hover {
+            background: #d4af37;
+            color: #0a0a0a;
+            transform: translateY(-3px);
+        }
+
+        #atown-limo-wrapper .footer-bottom {
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            padding-top: 2rem;
+            text-align: center;
+            color: #888888;
+            font-size: 0.9rem;
+        }
+
+        #atown-limo-wrapper .footer-bottom p {
+            margin: 0;
+        }
+
+        /* ================================
+           3D PARALLAX GALLERY SECTION
+           ================================ */
+
+        #atown-limo-wrapper .parallax-gallery-section {
+            padding: 8rem 0;
+            background: #0a0a0a;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #atown-limo-wrapper .gallery-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        #atown-limo-wrapper .gallery-scroll-wrapper {
+            margin-top: 4rem;
+            perspective: 1500px;
+            perspective-origin: center;
+            overflow: hidden;
+        }
+
+        #atown-limo-wrapper .gallery-scroll {
+            display: flex;
+            gap: 2rem;
+            padding: 2rem 0;
+            animation: galleryInfiniteScroll 40s linear infinite;
+            will-change: transform;
+        }
+
+        #atown-limo-wrapper .gallery-scroll:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes galleryInfiniteScroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(calc(-100% / 2));
+            }
+        }
+
+        #atown-limo-wrapper .gallery-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        #atown-limo-wrapper .gallery-card {
+            min-width: 400px;
+            height: 500px;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            transform-style: preserve-3d;
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        #atown-limo-wrapper .gallery-card:hover {
+            transform: translateZ(30px) scale(1.02);
+            border-color: #d4af37;
+            box-shadow: 0 25px 60px rgba(212, 175, 55, 0.3);
+        }
+
+        #atown-limo-wrapper .gallery-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+            background: #0a0a0a;
+            transition: transform 0.6s ease;
+        }
+
+        #atown-limo-wrapper .gallery-card:hover img {
+            transform: scale(1.05);
+        }
+
+        #atown-limo-wrapper .gallery-card-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+        }
+
+        #atown-limo-wrapper .gallery-card:hover .gallery-card-overlay {
+            transform: translateY(0);
+        }
+
+        #atown-limo-wrapper .gallery-card-title {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #d4af37;
+            margin-bottom: 0.5rem;
+        }
+
+        #atown-limo-wrapper .gallery-card-description {
+            font-size: 0.95rem;
+            color: #ffffff;
+            line-height: 1.5;
+        }
+
+        /* 3D Mouse Tracking Effect */
+        #atown-limo-wrapper .fleet-card {
+            transform-style: preserve-3d;
+            transition: transform 0.3s ease;
+        }
+
+        #atown-limo-wrapper .fleet-card.tilt-active {
+            will-change: transform;
+        }
+
+        /* Scroll Animations */
+        #atown-limo-wrapper .scroll-reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        #atown-limo-wrapper .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ================================
+           ANIMATIONS
+           ================================ */
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes floatAnimation {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Performance Optimizations */
+        #atown-limo-wrapper .hero-video,
+        #atown-limo-wrapper .fleet-image img,
+        #atown-limo-wrapper .gallery-card {
+            will-change: transform;
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* ================================
+           RESPONSIVE DESIGN
+           ================================ */
+
+        /* Ultra-Wide Screens (1600px+) */
+        @media (min-width: 1600px) {
+
+            #atown-limo-wrapper .hero-content,
+            #atown-limo-wrapper .section-container {
+                max-width: 1600px;
+            }
+
+            #atown-limo-wrapper .hero-headline {
+                font-size: 5rem;
+            }
+
+            #atown-limo-wrapper .section-title {
+                font-size: 4rem;
+            }
+        }
+
+        /* Large Tablets & Small Laptops (1200px - 1024px) */
+        @media (max-width: 1200px) {
+
+            #atown-limo-wrapper .header-container,
+            #atown-limo-wrapper .section-container {
+                max-width: 1200px;
+            }
+
+            #atown-limo-wrapper .footer-grid {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+        }
+
+        /* Tablets (1024px and below) */
+        @media (max-width: 1024px) {
+            #atown-limo-wrapper .hero-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            #atown-limo-wrapper .fleet-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+
+            #atown-limo-wrapper .value-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+
+            #atown-limo-wrapper .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            #atown-limo-wrapper .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            #atown-limo-wrapper .nav-links {
+                gap: 1.5rem;
+            }
+        }
+
+        /* Mobile Devices (768px and below) */
+        @media (max-width: 768px) {
+            #atown-limo-wrapper .header {
+                padding: 1rem 1.5rem;
+            }
+
+            #atown-limo-wrapper .nav-links {
+                display: none;
+            }
+
+            #atown-limo-wrapper .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(10, 10, 10, 0.98);
+                backdrop-filter: blur(20px);
+                padding: 2rem;
+                gap: 1.5rem;
+                border-top: 1px solid rgba(212, 175, 55, 0.2);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            }
+
+            #atown-limo-wrapper .mobile-toggle {
+                display: flex;
+            }
+
+            #atown-limo-wrapper .hero {
+                min-height: auto;
+                padding: 3rem 1.5rem;
+            }
+
+            #atown-limo-wrapper .hero-video {
+                transform: scale(1);
+            }
+
+            #atown-limo-wrapper .gallery-card {
+                min-width: 300px;
+                height: 400px;
+            }
+
+            #atown-limo-wrapper .parallax-gallery-section {
+                padding: 4rem 0;
+            }
+
+            #atown-limo-wrapper .booking-widget {
+                padding: 2rem 1.5rem;
+            }
+
+            #atown-limo-wrapper .booking-widget h3 {
+                font-size: 1.5rem;
+            }
+
+            #atown-limo-wrapper .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            #atown-limo-wrapper .fleet-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #atown-limo-wrapper .value-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #atown-limo-wrapper .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #atown-limo-wrapper .cta-phone {
+                padding: 0.6rem 1rem;
+                font-size: 0.75rem;
+                white-space: nowrap;
+            }
+
+            #atown-limo-wrapper .logo {
+                font-size: 1.2rem;
+                white-space: nowrap;
+            }
+
+            #atown-limo-wrapper .service-card {
+                min-width: 280px;
+            }
+
+            #atown-limo-wrapper .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            #atown-limo-wrapper .hero-headline {
+                font-size: 2rem;
+            }
+
+            #atown-limo-wrapper .fleet-section,
+            #atown-limo-wrapper .value-section {
+                padding: 4rem 1.5rem;
+            }
+        }
+
+        /* Small Phones (480px and below) */
+        @media (max-width: 480px) {
+            #atown-limo-wrapper .header {
+                padding: 0.8rem 1rem;
+            }
+
+            #atown-limo-wrapper .logo {
+                font-size: 1.2rem;
+                letter-spacing: 2px;
+            }
+
+            #atown-limo-wrapper .hero {
+                padding: 2rem 1rem;
+            }
+
+            #atown-limo-wrapper .booking-widget {
+                padding: 1.5rem 1rem;
+            }
+
+            #atown-limo-wrapper .form-group input,
+            #atown-limo-wrapper .form-group select {
+                padding: 0.8rem;
+                font-size: 0.9rem;
+            }
+
+            #atown-limo-wrapper .btn-quote {
+                padding: 1rem;
+                font-size: 1rem;
+            }
+
+            #atown-limo-wrapper .service-card,
+            #atown-limo-wrapper .fleet-card,
+            #atown-limo-wrapper .value-card {
+                padding: 1.5rem 1rem;
+            }
+
+            #atown-limo-wrapper .service-icon,
+            #atown-limo-wrapper .value-icon {
+                font-size: 2.5rem;
+            }
+
+            #atown-limo-wrapper .fleet-image {
+                height: 200px;
+            }
+
+            #atown-limo-wrapper .services-section,
+            #atown-limo-wrapper .fleet-section,
+            #atown-limo-wrapper .value-section {
+                padding: 3rem 1rem;
+            }
+
+            #atown-limo-wrapper .footer {
+                padding: 3rem 1rem 1.5rem;
+            }
+
+            #atown-limo-wrapper .cta-phone {
+                padding: 0.6rem 1rem;
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Landscape Mode for Mobile */
+        @media (max-width: 768px) and (orientation: landscape) {
+            #atown-limo-wrapper .hero {
+                min-height: auto;
+                padding: 2rem 1.5rem;
+            }
+
+            #atown-limo-wrapper .hero-content {
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+            }
+        }
+
+        /* Touch Device Optimizations */
+        @media (hover: none) and (pointer: coarse) {
+
+            #atown-limo-wrapper .service-card,
+            #atown-limo-wrapper .fleet-card,
+            #atown-limo-wrapper .value-card {
+                transition: none;
+            }
+
+            #atown-limo-wrapper .service-card:active,
+            #atown-limo-wrapper .fleet-card:active,
+            #atown-limo-wrapper .value-card:active {
+                transform: scale(0.98);
+            }
+
+            /* Larger touch targets */
+            #atown-limo-wrapper .nav-links a,
+            #atown-limo-wrapper .footer-links a {
+                padding: 0.5rem 0;
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+            }
+
+            #atown-limo-wrapper .btn-quote,
+            #atown-limo-wrapper .cta-phone {
+                min-height: 48px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ================================
+         WORDPRESS INSTRUCTIONS:
+         Copy everything within the #atown-limo-wrapper div
+         and paste it into a Custom HTML block or Elementor HTML widget
+         ================================ -->
+
+    <div id="atown-limo-wrapper">
+
+        <!-- HEADER -->
+        <header class="header">
+            <div class="header-container">
+                <a href="#" class="logo">A TOWN LIMO</a>
+
+                <nav class="nav">
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#fleet">Fleet</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <a href="tel:5165005526" class="cta-phone">
+                        <svg viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M93.781 51.578C95 50.969 96 49.359 96 48c0-1.375-1-2.969-2.219-3.578 0 0-22.868-1.514-31.781-10.422-8.915-8.91-10.438-31.781-10.438-31.781C50.969 1 49.375 0 48 0s-2.969 1-3.594 2.219c0 0-1.5 22.87-10.406 31.781-8.908 8.913-31.781 10.422-31.781 10.422C1 45.031 0 46.625 0 48c0 1.359 1 2.969 2.219 3.578 0 0 22.873 1.51 31.781 10.422 8.906 8.911 10.406 31.781 10.406 31.781C45.031 95 46.625 96 48 96s2.969-1 3.562-2.219c0 0 1.523-22.871 10.438-31.781 8.913-8.908 31.781-10.422 31.781-10.422Z"
+                                fill="#fff" />
+                        </svg>
+                        <svg viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M93.781 51.578C95 50.969 96 49.359 96 48c0-1.375-1-2.969-2.219-3.578 0 0-22.868-1.514-31.781-10.422-8.915-8.91-10.438-31.781-10.438-31.781C50.969 1 49.375 0 48 0s-2.969 1-3.594 2.219c0 0-1.5 22.87-10.406 31.781-8.908 8.913-31.781 10.422-31.781 10.422C1 45.031 0 46.625 0 48c0 1.359 1 2.969 2.219 3.578 0 0 22.873 1.51 31.781 10.422 8.906 8.911 10.406 31.781 10.406 31.781C45.031 95 46.625 96 48 96s2.969-1 3.562-2.219c0 0 1.523-22.871 10.438-31.781 8.913-8.908 31.781-10.422 31.781-10.422Z"
+                                fill="#fff" />
+                        </svg>
+                        <svg viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M93.781 51.578C95 50.969 96 49.359 96 48c0-1.375-1-2.969-2.219-3.578 0 0-22.868-1.514-31.781-10.422-8.915-8.91-10.438-31.781-10.438-31.781C50.969 1 49.375 0 48 0s-2.969 1-3.594 2.219c0 0-1.5 22.87-10.406 31.781-8.908 8.913-31.781 10.422-31.781 10.422C1 45.031 0 46.625 0 48c0 1.359 1 2.969 2.219 3.578 0 0 22.873 1.51 31.781 10.422 8.906 8.911 10.406 31.781 10.406 31.781C45.031 95 46.625 96 48 96s2.969-1 3.562-2.219c0 0 1.523-22.871 10.438-31.781 8.913-8.908 31.781-10.422 31.781-10.422Z"
+                                fill="#fff" />
+                        </svg>
+                        <svg viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M93.781 51.578C95 50.969 96 49.359 96 48c0-1.375-1-2.969-2.219-3.578 0 0-22.868-1.514-31.781-10.422-8.915-8.91-10.438-31.781-10.438-31.781C50.969 1 49.375 0 48 0s-2.969 1-3.594 2.219c0 0-1.5 22.87-10.406 31.781-8.908 8.913-31.781 10.422-31.781 10.422C1 45.031 0 46.625 0 48c0 1.359 1 2.969 2.219 3.578 0 0 22.873 1.51 31.781 10.422 8.906 8.911 10.406 31.781 10.406 31.781C45.031 95 46.625 96 48 96s2.969-1 3.562-2.219c0 0 1.523-22.871 10.438-31.781 8.913-8.908 31.781-10.422 31.781-10.422Z"
+                                fill="#fff" />
+                        </svg>
+                        <svg viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M93.781 51.578C95 50.969 96 49.359 96 48c0-1.375-1-2.969-2.219-3.578 0 0-22.868-1.514-31.781-10.422-8.915-8.91-10.438-31.781-10.438-31.781C50.969 1 49.375 0 48 0s-2.969 1-3.594 2.219c0 0-1.5 22.87-10.406 31.781-8.908 8.913-31.781 10.422-31.781 10.422C1 45.031 0 46.625 0 48c0 1.359 1 2.969 2.219 3.578 0 0 22.873 1.51 31.781 10.422 8.906 8.911 10.406 31.781 10.406 31.781C45.031 95 46.625 96 48 96s2.969-1 3.562-2.219c0 0 1.523-22.871 10.438-31.781 8.913-8.908 31.781-10.422 31.781-10.422Z"
+                                fill="#fff" />
+                        </svg>
+                        <span class="sparkle-text">Call (516) 500-5526</span>
+                    </a>
+                </nav>
+
+                <div class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </header>
+
+        <!-- HERO SECTION -->
+        <section class="hero" id="home">
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="Images/video.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-headline">Atlanta's Premier Luxury Transportation</h1>
+                    <p class="hero-subheadline">Professional Chauffeurs. Meticulous Fleet. On-Time Guarantee.</p>
+                </div>
+
+                <!-- BOOKING WIDGET -->
+                <div class="booking-widget">
+                    <!-- SOCIAL PROOF BADGES-->
+                    <div class="trust-badges">
+                        <div class="trust-badge">
+                            <span class="trust-icon">⭐</span>
+                            <div class="trust-info">
+                                <strong>500+ Reviews</strong>
+                                <small>5.0 Rating</small>
+                            </div>
+                        </div>
+                        <div class="trust-badge">
+                            <span class="trust-icon">✓</span>
+                            <div class="trust-info">
+                                <strong>10,000+ Rides</strong>
+                                <small>Since 2010</small>
+                            </div>
+                        </div>
+                        <div class="trust-badge availability-badge">
+                            <span class="trust-icon pulse">🚗</span>
+                            <div class="trust-info">
+                                <strong id="availableCount">Loading...</strong>
+                                <small>Available Now</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RECENT BOOKING NOTIFICATION -->
+                    <div class="recent-booking" id="recentBooking" style="display: none;">
+                        <div class="booking-icon">✓</div>
+                        <div class="booking-text">
+                            <strong id="bookingName"></strong>
+                            <small id="bookingDetail"></small>
+                        </div>
+                    </div>
+
+                    <h3>Reserve Your Ride</h3>
+                    <form id="bookingForm">
+                        <div class="form-group">
+                            <label for="pickup">Pickup Location</label>
+                            <input type="text" id="pickup" placeholder="Enter pickup address" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dropoff">Drop-off Location</label>
+                            <input type="text" id="dropoff" placeholder="Enter destination" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Pickup Date</label>
+                                <input type="date" id="date" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="time">Pickup Time</label>
+                                <input type="time" id="time" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="vehicle">Select Vehicle</label>
+                            <select id="vehicle" required>
+                                <option value="">Choose your vehicle</option>
+                                <option value="sedan">Executive Sedan</option>
+                                <option value="escalade">Cadillac Escalade</option>
+                                <option value="sprinter">Mercedes Sprinter</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" placeholder="(123) 456-7890" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" placeholder="your@email.com" required>
+                            </div>
+                        </div>
+
+                        <!-- PRICE ESTIMATOR -->
+                        <div class="price-estimator" id="priceEstimator" style="display: none;">
+                            <div class="price-header">
+                                <span>Estimated Price</span>
+                                <div class="price-tooltip">ⓘ
+                                    <span class="tooltip-text">Base estimate. Final price confirmed after
+                                        booking.</span>
+                                </div>
+                            </div>
+                            <div class="price-amount" id="estimatedPrice">$0</div>
+                            <div class="price-details">
+                                <small id="priceDistance"></small>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-quote">
+                            <svg viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M93.781 51.578C95 50.969 96 49.359 96 48c0-1.375-1-2.969-2.219-3.578 0 0-22.868-1.514-31.781-10.422-8.915-8.91-10.438-31.781-10.438-31.781C50.969 1 49.375 0 48 0s-2.969 1-3.594 2.219c0 0-1.5 22.87-10.406 31.781-8.908 8.913-31.781 10.422-31.781 10.422C1 45.031 0 46.625 0 48c0 1.359 1 2.969 2.219 3.578 0 0 22.873 1.51 31.781 10.422 8.906 8.911 10.406 31.781 10.406 31.781C45.031 95 46.625 96 48 96s2.969-1 3.562-2.219c0 0 1.523-22.871 10.438-31.781 8.913-8.908 31.781-10.422 31.781-10.422Z"
+                                    fill="#fff" />
+                            </svg>
+                            <svg viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M93.781 51.578C95 50.969 96 49.359 96 48c0-1.375-1-2.969-2.219-3.578 0 0-22.868-1.514-31.781-10.422-8.915-8.91-10.438-31.781-10.438-31.781C50.969 1 49.375 0 48 0s-2.969 1-3.594 2.219c0 0-1.5 22.87-10.406 31.781-8.908 8.913-31.781 10.422-31.781 10.422C1 45.031 0 46.625 0 48c0 1.359 1 2.969 2.219 3.578 0 0 22.873 1.51 31.781 10.422 8.906 8.911 10.406 31.781 10.406 31.781C45.031 95 46.625 96 48 96s2.969-1 3.562-2.219c0 0 1.523-22.871 10.438-31.781 8.913-8.908 31.781-10.422 31.781-10.422Z"
+                                    fill="#fff" />
+                            </svg>
+                            <svg viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M93.781 51.578C95 50.969 96 49.359 96 48c0-1.375-1-2.969-2.219-3.578 0 0-22.868-1.514-31.781-10.422-8.915-8.91-10.438-31.781-10.438-31.781C50.969 1 49.375 0 48 0s-2.969 1-3.594 2.219c0 0-1.5 22.87-10.406 31.781-8.908 8.913-31.781 10.422-31.781 10.422C1 45.031 0 46.625 0 48c0 1.359 1 2.969 2.219 3.578 0 0 22.873 1.51 31.781 10.422 8.906 8.911 10.406 31.781 10.406 31.781C45.031 95 46.625 96 48 96s2.969-1 3.562-2.219c0 0 1.523-22.871 10.438-31.781 8.913-8.908 31.781-10.422 31.781-10.422Z"
+                                    fill="#fff" />
+                            </svg>
+                            <svg viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M93.781 51.578C95 50.969 96 49.359 96 48c0-1.375-1-2.969-2.219-3.578 0 0-22.868-1.514-31.781-10.422-8.915-8.91-10.438-31.781-10.438-31.781C50.969 1 49.375 0 48 0s-2.969 1-3.594 2.219c0 0-1.5 22.87-10.406 31.781-8.908 8.913-31.781 10.422-31.781 10.422C1 45.031 0 46.625 0 48c0 1.359 1 2.969 2.219 3.578 0 0 22.873 1.51 31.781 10.422 8.906 8.911 10.406 31.781 10.406 31.781C45.031 95 46.625 96 48 96s2.969-1 3.562-2.219c0 0 1.523-22.871 10.438-31.781 8.913-8.908 31.781-10.422 31.781-10.422Z"
+                                    fill="#fff" />
+                            </svg>
+                            <svg viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M93.781 51.578C95 50.969 96 49.359 96 48c0-1.375-1-2.969-2.219-3.578 0 0-22.868-1.514-31.781-10.422-8.915-8.91-10.438-31.781-10.438-31.781C50.969 1 49.375 0 48 0s-2.969 1-3.594 2.219c0 0-1.5 22.87-10.406 31.781-8.908 8.913-31.781 10.422-31.781 10.422C1 45.031 0 46.625 0 48c0 1.359 1 2.969 2.219 3.578 0 0 22.873 1.51 31.781 10.422 8.906 8.911 10.406 31.781 10.406 31.781C45.031 95 46.625 96 48 96s2.969-1 3.562-2.219c0 0 1.523-22.871 10.438-31.781 8.913-8.908 31.781-10.422 31.781-10.422Z"
+                                    fill="#fff" />
+                            </svg>
+                            <span class="sparkle-text">Get Instant Quote</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section class="services-section">
+            <div class="section-container">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">Tailored transportation for every occasion</p>
+
+                <div class="services-carousel-wrapper">
+                    <div class="services-grid">
+                        <!-- Original Set -->
+                        <div class="service-card">
+                            <div class="service-icon">✈️</div>
+                            <h3 class="service-name">Airport Transfers</h3>
+                            <p class="service-description">Stress-free airport transportation with flight tracking, meet
+                                &
+                                greet service, and guaranteed on-time arrivals.</p>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">💼</div>
+                            <h3 class="service-name">Corporate Travel</h3>
+                            <p class="service-description">Professional chauffeur services for executives, board
+                                meetings,
+                                conferences, and business events.</p>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">🎉</div>
+                            <h3 class="service-name">Special Events</h3>
+                            <p class="service-description">Elevate your celebrations with luxury transportation for
+                                weddings, anniversaries, proms, and more.</p>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">🕒</div>
+                            <h3 class="service-name">Hourly Charters</h3>
+                            <p class="service-description">Flexible hourly bookings for multi-stop itineraries, city
+                                tours,
+                                or extended business needs.</p>
+                        </div>
+
+                        <!-- Duplicate Set for Infinite Loop -->
+                        <div class="service-card">
+                            <div class="service-icon">✈️</div>
+                            <h3 class="service-name">Airport Transfers</h3>
+                            <p class="service-description">Stress-free airport transportation with flight tracking, meet
+                                &
+                                greet service, and guaranteed on-time arrivals.</p>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">💼</div>
+                            <h3 class="service-name">Corporate Travel</h3>
+                            <p class="service-description">Professional chauffeur services for executives, board
+                                meetings,
+                                conferences, and business events.</p>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">🎉</div>
+                            <h3 class="service-name">Special Events</h3>
+                            <p class="service-description">Elevate your celebrations with luxury transportation for
+                                weddings, anniversaries, proms, and more.</p>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">🕒</div>
+                            <h3 class="service-name">Hourly Charters</h3>
+                            <p class="service-description">Flexible hourly bookings for multi-stop itineraries, city
+                                tours,
+                                or extended business needs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FLEET SECTION -->
+        <section class="fleet-section" id="fleet">
+            <div class="section-container">
+                <h2 class="section-title">Our Premium Fleet</h2>
+                <p class="section-subtitle">Experience luxury at every mile</p>
+
+                <div class="fleet-grid">
+                    <!-- Executive Sedan -->
+                    <div class="fleet-card">
+                        <div class="fleet-image">
+                            <img src="Images/audi-rs-e-tron-gt-2021-4027x3720-4511.jpg"
+                                alt="Executive Sedan - Audi RS e-tron GT">
+                        </div>
+                        <div class="fleet-info">
+                            <h3 class="fleet-name">Executive Sedan</h3>
+                            <p class="fleet-description">Elegant comfort for business transfers.</p>
+                            <div class="fleet-features">
+                                <div class="feature">
+                                    <span class="feature-icon">👥</span>
+                                    <span>3 Passengers</span>
+                                </div>
+                                <div class="feature">
+                                    <span class="feature-icon">🧳</span>
+                                    <span>3 Luggage</span>
+                                </div>
+                                <div class="feature">
+                                    <span class="feature-icon">💺</span>
+                                    <span>Leather Seats</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cadillac Escalade ESV -->
+                    <div class="fleet-card">
+                        <div class="fleet-image">
+                            <img src="Images/my25-escalade-gallery-exterior-grid-front.webp"
+                                alt="Cadillac Escalade ESV">
+                        </div>
+                        <div class="fleet-info">
+                            <h3 class="fleet-name">Cadillac Escalade ESV</h3>
+                            <p class="fleet-description">The pinnacle of luxury SUV travel.</p>
+                            <div class="fleet-features">
+                                <div class="feature">
+                                    <span class="feature-icon">👥</span>
+                                    <span>6 Passengers</span>
+                                </div>
+                                <div class="feature">
+                                    <span class="feature-icon">🧳</span>
+                                    <span>6 Luggage</span>
+                                </div>
+                                <div class="feature">
+                                    <span class="feature-icon">💺</span>
+                                    <span>Captain Chairs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mercedes Sprinter -->
+                    <div class="fleet-card">
+                        <div class="fleet-image">
+                            <img src="Images/wp4130086-mercedes-benz-sprinter-wallpapers.jpg" alt="Mercedes Sprinter">
+                        </div>
+                        <div class="fleet-info">
+                            <h3 class="fleet-name">Mercedes Sprinter</h3>
+                            <p class="fleet-description">Refined comfort for group travel.</p>
+                            <div class="fleet-features">
+                                <div class="feature">
+                                    <span class="feature-icon">👥</span>
+                                    <span>14 Passengers</span>
+                                </div>
+                                <div class="feature">
+                                    <span class="feature-icon">🧳</span>
+                                    <span>12 Luggage</span>
+                                </div>
+                                <div class="feature">
+                                    <span class="feature-icon">🚪</span>
+                                    <span>Privacy Partition</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3D PARALLAX GALLERY SECTION -->
+        <section class="parallax-gallery-section">
+            <div class="gallery-container">
+                <h2 class="section-title">Experience Luxury in Motion</h2>
+                <p class="section-subtitle">Immerse yourself in our world-class fleet</p>
+
+                <div class="gallery-scroll-wrapper">
+                    <div class="gallery-scroll">
+                        <!-- Original Set -->
+                        <div class="gallery-card">
+                            <img src="Images/my25-escalade-gallery-interior-grid-seating.webp"
+                                alt="Escalade Luxury Interior">
+                            <div class="gallery-card-overlay">
+                                <h3 class="gallery-card-title">Premium Interior</h3>
+                                <p class="gallery-card-description">Handcrafted leather seats with executive comfort</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-card">
+                            <img src="Images/my25-escalade-gallery-exterior-grid-front-grille.webp"
+                                alt="Escalade Front Grille">
+                            <div class="gallery-card-overlay">
+                                <h3 class="gallery-card-title">Iconic Design</h3>
+                                <p class="gallery-card-description">Bold presence with unmistakable elegance</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-card">
+                            <img src="Images/vehicles-suvs-25-escalade-esv-v.webp" alt="Escalade ESV">
+                            <div class="gallery-card-overlay">
+                                <h3 class="gallery-card-title">Extended Luxury</h3>
+                                <p class="gallery-card-description">Spacious ESV model for ultimate comfort</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-card">
+                            <img src="Images/audi-rs-e-tron-gt-5120x2880-23505.jpg" alt="Audi e-tron GT Performance">
+                            <div class="gallery-card-overlay">
+                                <h3 class="gallery-card-title">Electric Performance</h3>
+                                <p class="gallery-card-description">Sustainable luxury with thrilling acceleration</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-card">
+                            <img src="Images/wp9405911-mercedes-van-2021-wallpapers.jpg" alt="Mercedes Sprinter Luxury">
+                            <div class="gallery-card-overlay">
+                                <h3 class="gallery-card-title">Group Excellence</h3>
+                                <p class="gallery-card-description">Perfect for corporate events and group travel</p>
+                            </div>
+                        </div>
+
+                        <!-- Duplicate Set for Infinite Loop -->
+                        <div class="gallery-card">
+                            <img src="Images/my25-escalade-gallery-interior-grid-seating.webp"
+                                alt="Escalade Luxury Interior">
+                            <div class="gallery-card-overlay">
+                                <h3 class="gallery-card-title">Premium Interior</h3>
+                                <p class="gallery-card-description">Handcrafted leather seats with executive comfort</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-card">
+                            <img src="Images/my25-escalade-gallery-exterior-grid-front-grille.webp"
+                                alt="Escalade Front Grille">
+                            <div class="gallery-card-overlay">
+                                <h3 class="gallery-card-title">Iconic Design</h3>
+                                <p class="gallery-card-description">Bold presence with unmistakable elegance</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-card">
+                            <img src="Images/vehicles-suvs-25-escalade-esv-v.webp" alt="Escalade ESV">
+                            <div class="gallery-card-overlay">
+                                <h3 class="gallery-card-title">Extended Luxury</h3>
+                                <p class="gallery-card-description">Spacious ESV model for ultimate comfort</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-card">
+                            <img src="Images/audi-rs-e-tron-gt-5120x2880-23505.jpg" alt="Audi e-tron GT Performance">
+                            <div class="gallery-card-overlay">
+                                <h3 class="gallery-card-title">Electric Performance</h3>
+                                <p class="gallery-card-description">Sustainable luxury with thrilling acceleration</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-card">
+                            <img src="Images/wp9405911-mercedes-van-2021-wallpapers.jpg" alt="Mercedes Sprinter Luxury">
+                            <div class="gallery-card-overlay">
+                                <h3 class="gallery-card-title">Group Excellence</h3>
+                                <p class="gallery-card-description">Perfect for corporate events and group travel</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VALUE PROPOSITIONS -->
+        <section class="value-section" id="services">
+            <div class="section-container">
+                <h2 class="section-title">Why Choose A Town Limo</h2>
+                <p class="section-subtitle">Uncompromising excellence in every detail</p>
+
+                <div class="value-grid">
+                    <div class="value-card">
+                        <div class="value-icon">✈️</div>
+                        <h3 class="value-title">Flight Tracking</h3>
+                        <p class="value-description">We monitor flights in real-time to ensure timely pickup.</p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon">🤝</div>
+                        <h3 class="value-title">Meet & Greet</h3>
+                        <p class="value-description">Chauffeur inside arrivals hall with a name sign.</p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon">🕐</div>
+                        <h3 class="value-title">24/7 Availability</h3>
+                        <p class="value-description">Serving you any time, day or night.</p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon">⭐</div>
+                        <h3 class="value-title">Professional Chauffeurs</h3>
+                        <p class="value-description">Vetted, discreet, and experienced.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer" id="contact">
+            <div class="footer-container">
+                <div class="footer-grid">
+                    <!-- Brand Column -->
+                    <div class="footer-brand">
+                        <h3>A TOWN LIMO</h3>
+                        <p>Atlanta's premier luxury transportation service. We provide professional chauffeur services
+                            with an unwavering commitment to excellence, safety, and punctuality.</p>
+                        <div class="footer-contact">
+                            <a href="tel:5165005526">📞 (516) 500-5526</a>
+                            <a href="mailto:info@atownlimo.com">✉️ info@atownlimo.com</a>
+                            <a href="#">📍 Atlanta, GA</a>
+                        </div>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook">
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="Instagram">
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="Twitter">
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="LinkedIn">
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#fleet">Our Fleet</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Services -->
+                    <div class="footer-section">
+                        <h4>Services</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">Airport Transfers</a></li>
+                            <li><a href="#">Corporate Travel</a></li>
+                            <li><a href="#">Special Events</a></li>
+                            <li><a href="#">Hourly Charters</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Hours -->
+                    <div class="footer-section">
+                        <h4>Hours</h4>
+                        <ul class="footer-links">
+                            <li style="color: #d4af37; font-weight: 600;">24/7 Availability</li>
+                            <li>Always at your service</li>
+                            <li>Day or Night</li>
+                            <li>Holidays Included</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2026 A Town Limo. All rights reserved. | Premium Luxury Transportation Services</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- ================================
+         JAVASCRIPT FOR INTERACTIVITY
+         ================================ -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileToggle.addEventListener('click', function () {
+            navLinks.classList.toggle('active');
+
+            // Animate hamburger icon
+            const spans = this.querySelectorAll('span');
+            if (navLinks.classList.contains('active')) {
+                spans[0].style.transform = 'rotate(45deg) translateY(8px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translateY(-8px)';
+            } else {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function (e) {
+            if (!mobileToggle.contains(e.target) && !navLinks.contains(e.target)) {
+                navLinks.classList.remove('active');
+                const spans = mobileToggle.querySelectorAll('span');
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+        });
+
+        // Booking Form Submission with validation
+        const bookingForm = document.getElementById('bookingForm');
+
+        bookingForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Collect form data
+            const formData = {
+                pickup: document.getElementById('pickup').value,
+                dropoff: document.getElementById('dropoff').value,
+                date: document.getElementById('date').value,
+                time: document.getElementById('time').value,
+                vehicle: document.getElementById('vehicle').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value
+            };
+
+            // Show loading state
+            const submitBtn = this.querySelector('.btn-quote');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Processing...';
+            submitBtn.disabled = true;
+
+            // Simulate API call (replace with actual backend call)
+            setTimeout(() => {
+                console.log('Booking Request:', formData);
+                alert('Thank you for your booking request! We will contact you shortly at ' + formData.phone);
+
+                // Reset form and button
+                bookingForm.reset();
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, 1000);
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('#atown-limo-wrapper a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        // Close mobile menu if open
+                        navLinks.classList.remove('active');
+                    }
+                }
+            });
+        });
+
+        // Header scroll effect with hide/show
+        let lastScroll = 0;
+        const header = document.querySelector('#atown-limo-wrapper .header');
+
+        window.addEventListener('scroll', function () {
+            const currentScroll = window.pageYOffset;
+
+            // Shrink header padding on scroll
+            if (currentScroll > 100) {
+                header.style.padding = '0.8rem 2rem';
+            } else {
+                header.style.padding = '1.2rem 2rem';
+            }
+
+            lastScroll = currentScroll;
+        });
+
+        // Parallax effect for hero section
+        const hero = document.querySelector('#atown-limo-wrapper .hero');
+        if (hero) {
+            window.addEventListener('scroll', function () {
+                const scrolled = window.pageYOffset;
+                const parallaxSpeed = 0.5;
+                if (scrolled < window.innerHeight) {
+                    hero.style.backgroundPositionY = -(scrolled * parallaxSpeed) + 'px';
+                }
+            });
+        }
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections for scroll animation
+        const animateElements = document.querySelectorAll(
+            '#atown-limo-wrapper .service-card, ' +
+            '#atown-limo-wrapper .fleet-card, ' +
+            '#atown-limo-wrapper .value-card'
+        );
+
+        animateElements.forEach((el, index) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = `all 0.6s ease ${index * 0.1}s`;
+            observer.observe(el);
+        });
+
+        // Set minimum date for booking (today)
+        const dateInput = document.getElementById('date');
+        if (dateInput) {
+            const today = new Date().toISOString().split('T')[0];
+            dateInput.setAttribute('min', today);
+        }
+
+        // Phone number formatting
+        const phoneInput = document.getElementById('phone');
+        if (phoneInput) {
+            phoneInput.addEventListener('input', function (e) {
+                let value = e.target.value.replace(/\D/g, '');
+                if (value.length > 0) {
+                    if (value.length <= 3) {
+                        value = `(${value}`;
+                    } else if (value.length <= 6) {
+                        value = `(${value.slice(0, 3)}) ${value.slice(3)}`;
+                    } else {
+                        value = `(${value.slice(0, 3)}) ${value.slice(3, 6)}-${value.slice(6, 10)}`;
+                    }
+                }
+                e.target.value = value;
+            });
+        }
+
+        // Add loading class to images (for lazy loading)
+        document.addEventListener('DOMContentLoaded', function () {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                img.loading = 'lazy';
+            });
+        });
+
+        // Performance: Debounce scroll events
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        // Optimize scroll performance
+        const optimizedScroll = debounce(function () {
+            // Any additional scroll-based animations can go here
+        }, 10);
+
+        window.addEventListener('scroll', optimizedScroll);
+
+        // Detect screen size changes and adjust layout dynamically
+        let resizeTimer;
+        window.addEventListener('resize', function () {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(function () {
+                // Close mobile menu on resize to desktop
+                if (window.innerWidth > 768) {
+                    navLinks.classList.remove('active');
+                }
+            }, 250);
+        });
+
+        // Add touch swipe gestures for mobile menu
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.addEventListener('touchstart', function (e) {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        document.addEventListener('touchend', function (e) {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            if (window.innerWidth <= 768) {
+                // Swipe right to open menu
+                if (touchStartX < 50 && touchEndX > touchStartX + 100) {
+                    navLinks.classList.add('active');
+                }
+                // Swipe left to close menu
+                if (navLinks.classList.contains('active') && touchEndX < touchStartX - 100) {
+                    navLinks.classList.remove('active');
+                }
+            }
+        }
+
+        // ================================
+        // 3D MOUSE TRACKING TILT EFFECT
+        // ================================
+        const fleetCards = document.querySelectorAll('#atown-limo-wrapper .fleet-card');
+
+        fleetCards.forEach(card => {
+            card.addEventListener('mousemove', handleTilt);
+            card.addEventListener('mouseleave', resetTilt);
+        });
+
+        function handleTilt(e) {
+            const card = e.currentTarget;
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotateX = ((y - centerY) / centerY) * -10;
+            const rotateY = ((x - centerX) / centerX) * 10;
+
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+            card.classList.add('tilt-active');
+        }
+
+        function resetTilt(e) {
+            const card = e.currentTarget;
+            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+            card.classList.remove('tilt-active');
+        }
+
+        // ================================
+        // VIDEO PARALLAX EFFECT
+        // ================================
+        const heroVideo = document.querySelector('#atown-limo-wrapper .hero-video');
+        if (heroVideo) {
+            window.addEventListener('scroll', function () {
+                const scrolled = window.pageYOffset;
+                const heroHeight = hero ? hero.offsetHeight : window.innerHeight;
+
+                if (scrolled < heroHeight) {
+                    const translateY = scrolled * 0.3;
+                    heroVideo.style.transform = `translateY(${translateY}px) scale(1.1)`;
+                }
+            });
+        }
+
+        // ================================
+        // GALLERY 3D SCROLL EFFECT
+        // ================================
+        const galleryScroll = document.querySelector('#atown-limo-wrapper .gallery-scroll');
+        const galleryCards = document.querySelectorAll('#atown-limo-wrapper .gallery-card');
+
+        if (galleryScroll && galleryCards.length > 0) {
+            galleryScroll.addEventListener('scroll', function () {
+                const scrollLeft = galleryScroll.scrollLeft;
+
+                galleryCards.forEach((card, index) => {
+                    const cardLeft = card.offsetLeft;
+                    const cardWidth = card.offsetWidth;
+                    const cardCenter = cardLeft + cardWidth / 2;
+                    const scrollCenter = scrollLeft + galleryScroll.clientWidth / 2;
+
+                    const distance = Math.abs(cardCenter - scrollCenter);
+                    const maxDistance = galleryScroll.clientWidth / 2;
+                    const normalizedDistance = Math.min(distance / maxDistance, 1);
+
+                    const rotateY = (1 - normalizedDistance) * 5 - 2.5;
+                    const scale = 1 - (normalizedDistance * 0.1);
+
+                    card.style.transform = `rotateY(${rotateY}deg) scale(${scale})`;
+                });
+            });
+
+            // Trigger initial calculation
+            galleryScroll.dispatchEvent(new Event('scroll'));
+        }
+
+        // ================================
+        // ENHANCED INTERSECTION OBSERVER FOR GALLERY
+        // ================================
+        const galleryObserverOptions = {
+            threshold: 0.2,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const galleryObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0) rotateY(0deg)';
+                }
+            });
+        }, galleryObserverOptions);
+
+        // Observe gallery cards with staggered animation
+        galleryCards.forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(50px)';
+            card.style.transition = `all 0.8s cubic-bezier(0.23, 1, 0.32, 1) ${index * 0.1}s`;
+            galleryObserver.observe(card);
+        });
+
+        // ================================
+        // PREMIUM CONVERSION FEATURES
+        // ================================
+
+        // 1. REAL-TIME PRICE ESTIMATOR
+        const priceRates = {
+            sedan: { baseRate: 75, perMile: 3.5, minCharge: 50 },
+            escalade: { baseRate: 120, perMile: 5, minCharge: 80 },
+            sprinter: { baseRate: 150, perMile: 6, minCharge: 100 }
+        };
+
+        function calculateEstimate() {
+            const pickup = document.getElementById('pickup').value.trim();
+            const dropoff = document.getElementById('dropoff').value.trim();
+            const vehicle = document.getElementById('vehicle').value;
+
+            if (pickup && dropoff && vehicle) {
+                // Simulated distance calculation (in real app, use Google Maps API)
+                const distance = Math.floor(Math.random() * 30) + 5; // 5-35 miles
+                const rate = priceRates[vehicle];
+
+                let price = rate.baseRate + (distance * rate.perMile);
+                price = Math.max(price, rate.minCharge);
+
+                // Show price estimator
+                document.getElementById('priceEstimator').style.display = 'block';
+                document.getElementById('estimatedPrice').textContent = '$' + Math.round(price);
+                document.getElementById('priceDistance').textContent = `~${distance} miles • Base fare + distance`;
+            } else {
+                document.getElementById('priceEstimator').style.display = 'none';
+            }
+        }
+
+        // Attach listeners to form fields
+        ['pickup', 'dropoff', 'vehicle'].forEach(id => {
+            const element = document.getElementById(id);
+            if (element) {
+                element.addEventListener('input', calculateEstimate);
+                element.addEventListener('change', calculateEstimate);
+            }
+        });
+
+        // 2. LIVE AVAILABILITY INDICATOR
+        function updateAvailability() {
+            const availableCount = document.getElementById('availableCount');
+            if (availableCount) {
+                const vehicles = Math.floor(Math.random() * 6) + 3; // 3-8 vehicles
+                availableCount.textContent = `${vehicles} Vehicles`;
+            }
+        }
+
+        // Update availability every 15 seconds
+        updateAvailability();
+        setInterval(updateAvailability, 15000);
+
+        // 3. SOCIAL PROOF - RECENT BOOKING NOTIFICATIONS
+        const recentBookings = [
+            { name: 'Sarah M.', detail: 'Booked Escalade for Airport Transfer' },
+            { name: 'Michael T.', detail: 'Reserved Sedan for Corporate Event' },
+            { name: 'Jennifer L.', detail: 'Booked Sprinter for Wedding' },
+            { name: 'David K.', detail: 'Reserved Escalade for Business Meeting' },
+            { name: 'Emily R.', detail: 'Booked Sedan for City Tour' },
+            { name: 'Robert P.', detail: 'Reserved Sprinter for Group Travel' },
+            { name: 'Lisa A.', detail: 'Booked Escalade for Special Event' },
+            { name: 'James W.', detail: 'Reserved Sedan for Airport Pickup' }
+        ];
+
+        function showRecentBooking() {
+            const notification = document.getElementById('recentBooking');
+            const nameElement = document.getElementById('bookingName');
+            const detailElement = document.getElementById('bookingDetail');
+
+            if (notification && nameElement && detailElement) {
+                // Pick random booking
+                const booking = recentBookings[Math.floor(Math.random() * recentBookings.length)];
+
+                nameElement.textContent = booking.name + ' just booked!';
+                detailElement.textContent = booking.detail;
+
+                // Show notification
+                notification.style.display = 'flex';
+
+                // Hide after 6 seconds
+                setTimeout(() => {
+                    notification.style.display = 'none';
+                }, 6000);
+            }
+        }
+
+        // Show first notification after 3 seconds
+        setTimeout(showRecentBooking, 3000);
+
+        // Show random notifications every 20-30 seconds
+        setInterval(() => {
+            if (Math.random() > 0.5) { // 50% chance each interval
+                showRecentBooking();
+            }
+        }, 25000);
+
+    </script>
+</body>
+
+</html>
